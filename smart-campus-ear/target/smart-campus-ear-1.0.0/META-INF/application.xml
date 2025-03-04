@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/application_7.xsd" version="7">
+  <display-name>smart-campus-ear</display-name>
+  <module>
+    <web>
+      <web-uri>com.smartcampus-smart-campus-web-1.0.0.war</web-uri>
+      <context-root>/smart-campus-web</context-root>
+    </web>
+  </module>
+  <module>
+    <web>
+      <web-uri>com.smartcampus-smart-campus-rest-1.0.0.war</web-uri>
+      <context-root>/smart-campus-rest</context-root>
+    </web>
+  </module>
+  <module>
+    <ejb>com.smartcampus-smart-campus-ejb-1.0.0.jar</ejb>
+  </module>
+  <library-directory>lib</library-directory>
+</application>

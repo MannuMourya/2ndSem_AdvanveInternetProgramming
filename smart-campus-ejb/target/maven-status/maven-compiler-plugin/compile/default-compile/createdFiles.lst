@@ -1,0 +1,8 @@
+com/smartcampus/ejb/entity/Course.class
+com/smartcampus/ejb/CourseEnrollmentBean.class
+com/smartcampus/ejb/entity/ExamSchedule.class
+com/smartcampus/ejb/entity/Profile.class
+com/smartcampus/ejb/entity/Student.class
+com/smartcampus/ejb/RegistrationBean.class
+com/smartcampus/ejb/entity/AdminUser.class
+com/smartcampus/ejb/entity/Faculty.class

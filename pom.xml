@@ -1,0 +1,58 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.smartcampus</groupId>
+    <artifactId>smart-campus-management</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+
+    <!-- List all submodules here -->
+    <modules>
+        <module>smart-campus-ejb</module>
+        <module>smart-campus-web</module>
+        <module>smart-campus-rest</module>
+        <module>smart-campus-ear</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <javaee.version>7.0</javaee.version>
+        <hibernate.version>5.4.32.Final</hibernate.version>
+        <!-- Updated Bean Validation version -->
+        <validation.version>2.0.1.Final</validation.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- Ensure all modules use Bean Validation 2.0.1.Final -->
+            <dependency>
+                <groupId>javax.validation</groupId>
+                <artifactId>validation-api</artifactId>
+                <version>${validation.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <!-- Configure the Maven Compiler Plugin using the modern <release> option -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.10.1</version>
+                <configuration>
+                    <release>8</release>
+                    <!-- Optionally suppress obsolete option warnings -->
+                    <!--
+                    <compilerArgs>
+                      <arg>-Xlint:-options</arg>
+                    </compilerArgs>
+                    -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
